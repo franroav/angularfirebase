@@ -1,0 +1,165 @@
+.container {
+  margin: 15px;
+  display: flex;
+  /* flex-direction: row | row-reverse | column | column-reverse; */
+  flex-direction: row;
+}
+
+/*ANIMATE CSS*/
+
+.cardEcommerce {
+  animation-delay: 0.5;
+  animation-duration: 2s;
+}
+
+.cardSoftware {
+  animation-delay: 0.5;
+  animation-duration: 1.5s;
+}
+.cardApp {
+  animation-delay: 0.5;
+  animation-duration: 3s;
+}
+.cardWeb {
+  animation-delay: 0.5;
+  animation-duration: 3s;
+}
+
+/***STYLE ****/
+
+.empresa-body {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.rainbow-card:before {
+  height: 4px;
+  width: 100%;
+  content: "";
+  background: linear-gradient(
+    270deg,
+    #6f42c1 7.1%,
+    #0366d6 28.4%,
+    #28a745 42.6%,
+    #ffd33d 56.8%,
+    #f66a0a 71%,
+    #d73a49 92.9%,
+    #6f42c1
+  );
+  background-size: 200% 100%;
+  animation: rainbow 4s linear infinite;
+  border-radius: 0.25rem 0.25em 0 0;
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("../../../assets/Angular_Logo.png");
+  background-size: cover;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* Middle column */
+.column.middle {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.cardList {
+  display: flex;
+}
+
+.software-card-image {
+  background-image: url("../../../assets/services/ilustrations/angular.png");
+  background-size: cover;
+}
+
+.ecommerce-card-image {
+  background-image: url("../../../assets/services/ilustrations/vue.png");
+  background-size: cover;
+}
+
+.app-card-image {
+  background-image: url("../../../assets/services/ilustrations/webkonce.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.web-card-image {
+  background-image: url("../../../assets/services/ilustrations/react.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* PARALAX **/
+
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  opacity: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("../../../assets/services/ilustrations/radeon.jpg");
+  min-height: 100%;
+}

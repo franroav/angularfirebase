@@ -1,0 +1,130 @@
+<app-breadcrumbs></app-breadcrumbs>
+
+<section class="container">
+  <div class="container-fluid">
+    <div
+      class="jumbotron p-4 p-md-5 text-white rounded bg-{{
+        service.color
+      }} animated fadeInUp"
+    >
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 font-italic">
+            {{ service.name }}
+          </h1>
+          <p class="lead my-3">
+            <em>{{ service.description }}</em>
+          </p>
+          <p class="lead mb-0 text-white font-weight-bold">
+            <u>Quiero saber más, seguir Leyendo ...</u>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-4">
+          <!-- Button code -->
+
+          <small
+            ><u class="mb-1 text-white"
+              >Agendar reunión meeting con el desarrollador ...</u
+            ></small
+          >
+          <div
+            title="meeting"
+            id="addeventatc1"
+            class="addeventatc animated fadeInUp"
+            aria-expanded="true"
+            aria-haspopup="true"
+            tabindex="0"
+            translate="no"
+            data-loaded="true"
+            style="visibility: visible; outline: 0px; z-index: 99999"
+            (click)="meeting($event.target)"
+          >
+            Agregar al Calendarío
+            <span class="start">{{ todaydate }} 11:00 AM</span>
+            <span class="end">{{ afterdate }} 12:00 AM</span>
+            <span class="timezone">America/Santiago</span>
+            <span class="title">Agendar Reunión</span>
+            <span class="description"
+              >Agendar Reunión para Proyecto SPA con
+              <a href="https://www.webkonce.cl" target="_blank"
+                >www.webkonce.cl</a
+              ></span
+            >
+            <span class="location">Internet</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div
+          class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative animated bounceInRight listConce4"
+        >
+          <div
+            class="col p-4 d-flex flex-column position-static animated bounceInLeft frameworkCard"
+          >
+            <strong class="d-inline-block mb-2 text-{{ service.color }}">{{
+              servicefrontend.title
+            }}</strong>
+            <blockquote class="blockquote">
+              <h3 class="mb-0">{{ servicefrontend.name }}</h3>
+              <footer class="blockquote-footer">
+                <p class="mb-0">{{ servicefrontend.description }}</p>
+                <a href="{{ servicefrontend.url }}">
+                  <br />
+                  <hr class="bg bg-{{ service.color }}" />
+                  <cite title="Saber más ...">Saber más ...</cite></a
+                >
+              </footer>
+            </blockquote>
+            <p class="card-text mb-auto"></p>
+          </div>
+          <div
+            class="col-auto d-none d-lg-block animated fadeInUp frameworkCard"
+          >
+            <img src="{{ service.frontend }}" width="60px" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative animated bounceInRight listConce4"
+            >
+              <div
+                class="col p-4 d-flex flex-column position-static animated bounceInRight frameworkCard"
+              >
+                <strong class="d-inline-block mb-2 text-{{ service.color }}">{{
+                  servicebackend.title
+                }}</strong>
+                <blockquote class="blockquote">
+                  <h3 class="mb-0">{{ servicebackend.name }}</h3>
+                  <footer class="blockquote-footer">
+                    <p class="mb-0">{{ servicebackend.description }}</p>
+                    <a href="{{ servicebackend.url }}">
+                      <br />
+                      <hr class="bg bg-{{ service.color }}" />
+                      <cite title="Saber más ...">Saber más ...</cite></a
+                    >
+                  </footer>
+                </blockquote>
+                <h3 class="mb-0"></h3>
+                <p class="mb-auto"></p>
+              </div>
+              <div
+                class="col-auto d-none d-lg-block animated fadeInDown frameworkCard"
+              >
+                <img src="{{ service.backend }}" width="60px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,338 @@
+<div class="container-fluid">
+  <!--1° First Row-->
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 mt-5 offset-md-1">
+      <mat-tab-group color="warn" backgroundColor="primary">
+        <!--2° Second Tab-->
+        <mat-tab label="Aplicación" class="text-white">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card">
+                <img
+                  src="../../assets/services/ilustrations/personas.png"
+                  width="100%"
+                  height="auto"
+                />
+                <div class="card-body">
+                  <a
+                    [routerLink]="['/personas']"
+                    class="btn btn-block btn-primary text-white"
+                    >Personas
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 offset-md-1">
+              <div class="card">
+                <img
+                  src="../../assets/services/ilustrations/regiones.png"
+                  width="100%"
+                  height="auto"
+                />
+                <div class="card-body">
+                  <a
+                    [routerLink]="['/regiones']"
+                    class="btn btn-block btn-danger text-white"
+                    >Regiones
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <!--3° Third Tab-->
+        <mat-tab label="Desarrollador" class="text-white">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <table
+                  class="table table-responsive table-sm table-striped text-center"
+                  *ngIf="windowSize.x >= 960"
+                >
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                      <th></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img
+                          class="media-object dp img-circle"
+                          src="../../assets/services/ilustrations/yo.jpg"
+                          style="width: 100px; height: 100px"
+                        />
+                      </td>
+                      <td>Francisco Javier Roa Valenzuela</td>
+                      <td>
+                        <tr>
+                          <td>
+                            <a href="mailto:franroav@webkonce.cl">
+                              <i
+                                class="fa fa-envelope text-center text-danger text-center"
+                              ></i>
+                            </a>
+                          </td>
+                        </tr>
+                      </td>
+                      <td>
+                        <tr>
+                          <td>
+                            <a href="tel:+56932243182">
+                              <i
+                                class="fa fa-phone text-center text-danger ml-2 pr-1"
+                              ></i>
+                            </a>
+                          </td>
+                          <td>
+                            <a
+                              href="https://web.whatsapp.com/send?phone=56932243182&text=Hola, tengo una consulta"
+                            >
+                              <i
+                                class="fa fa-whatsapp text-center text-success ml-2"
+                              ></i>
+                            </a>
+                          </td>
+                        </tr>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th>Profesión</th>
+                      <th>Portafolio</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <ul class="list-group">
+                          <li
+                            class="list-group-item list-group-item-light text-dark"
+                          >
+                            <strong>Ingeniero Civil Mecanico</strong>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-dark text-white"
+                          >
+                            <strong>Desarrollador Web Fullstack</strong>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <a href="https://www.concepcion.cl"
+                              >https://www.concepcion.cl</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.proclima.cl"
+                              >https://www.proclima.cl</a
+                            >
+                          </li>
+                          <li>
+                            <a href="http://friet.webkonce.cl/"
+                              >http://friet.webkonce.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="http://clinicaroadent.cl/"
+                              >http://clinicaroadent.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.dentobeli.cl/"
+                              >https://www.dentobeli.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="http://cmvc.cl/">http://cmvc.cl/</a>
+                          </li>
+                          <li>
+                            <a href="https://lalocura.cl/"
+                              >https://lalocura.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://reconectaconce.webkonce.cl/"
+                              >https://reconectaconce.webkonce.cl/</a
+                            >
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th>Sitio Web</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="https://webkonce.cl" target="_blank"
+                          >https://webkonce.cl</a
+                        >.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-sm table-striped text-center"
+                  *ngIf="windowSize.x < 960"
+                >
+                  <thead>
+                    <tr>
+                      <th>Imagen</th>
+                      <th>Nombre</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <img
+                          class="media-object dp img-circle"
+                          src="../../assets/services/ilustrations/yo.jpg"
+                          style="width: 100px; height: 100px"
+                        />
+                      </td>
+                      <td>
+                        <ul>
+                          <li>Francisco Javier Roa Valenzuela</li>
+                          <li>
+                            <a href="mailto:franroav@webkonce.cl">
+                              <i
+                                class="fa fa-envelope text-center text-danger text-center"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a href="tel:+56932243182">
+                              <i
+                                class="fa fa-phone text-center text-danger ml-2 pr-1"
+                              ></i>
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="https://web.whatsapp.com/send?phone=56932243182&text=Hola, tengo una consulta"
+                            >
+                              <i
+                                class="fa fa-whatsapp text-center text-success ml-2"
+                              ></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th>Profesión</th>
+                      <th>Portafolio</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <ul class="list-group">
+                          <li
+                            class="list-group-item list-group-item-light text-dark"
+                          >
+                            <strong>Ingeniero Civil Mecanico</strong>
+                          </li>
+                          <li
+                            class="list-group-item list-group-item-dark text-white"
+                          >
+                            <strong>Desarrollador Web Fullstack</strong>
+                          </li>
+                        </ul>
+                      </td>
+                      <td>
+                        <ul>
+                          <li>
+                            <a href="https://www.concepcion.cl"
+                              >https://www.concepcion.cl</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.proclima.cl"
+                              >https://www.proclima.cl</a
+                            >
+                          </li>
+                          <li>
+                            <a href="http://friet.webkonce.cl/"
+                              >http://friet.webkonce.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="http://clinicaroadent.cl/"
+                              >http://clinicaroadent.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://www.dentobeli.cl/"
+                              >https://www.dentobeli.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="http://cmvc.cl/">http://cmvc.cl/</a>
+                          </li>
+                          <li>
+                            <a href="https://lalocura.cl/"
+                              >https://lalocura.cl/</a
+                            >
+                          </li>
+                          <li>
+                            <a href="https://reconectaconce.webkonce.cl/"
+                              >https://reconectaconce.webkonce.cl/</a
+                            >
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <thead>
+                    <tr>
+                      <th>Sitio Web</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <a href="https://webkonce.cl" target="_blank"
+                          >https://webkonce.cl</a
+                        >.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+        <!--4° Fourth Tab Geolocalización -->
+        <!--<mat-tab label="Mapa" class="text-white" *ngIf="identity">
+                            MAP 
+                  <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12 mt-1">
+                      <google-map
+                        width="100%"
+                        height="auto"
+                        [center]="position"
+                        class="img-fluid"
+                      >
+                        <map-marker [position]="position" [label]="label">
+                        </map-marker>
+                      </google-map>
+                    </div>
+                  </div>
+        </mat-tab>-->
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

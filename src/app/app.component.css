@@ -1,0 +1,13 @@
+.linkApp {
+    padding-left: 2rem; 
+    font-size:12px;
+    color: white;
+}
+
+.buttonToggle{  
+
+    position: absolute;
+    right: 10px;
+    margin-bottom: 30px;
+
+}

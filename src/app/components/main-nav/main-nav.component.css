@@ -1,0 +1,190 @@
+mat-sidenav {
+  background-color: #c13030;
+}
+
+.navbar-nav li {
+  background-color: #c13030;
+}
+
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 220px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #c13030;
+}
+.nav-mat-icon-link {
+  padding-right: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+.spacer {
+  /*ANGULAR MATERIAL TRABAJA CON FLEXBOX DE TRAS DE LAS ESCENAS */
+  flex: 1 1 auto;
+}
+
+/*.activated {
+  color: #000;
+  background-color: blue;
+}*/
+
+.nav-link {
+  color: #fff;
+  font-size: small;
+}
+
+@media (max-width: 768px) {
+  /*.sidenav {
+    display: none;
+  }*/
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: pink;
+    /**set opacity to default***/
+    opacity: 0;
+    transform: scaleY(0);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-link:hover::before {
+    opacity: 0.5;
+    transform: scaleY(0.5) scaleX(2);
+  }
+
+  .nav-link.active {
+    color: #000;
+    background-color: #fffde7;
+    font-size: small;
+  }
+
+  .nav-link.active::before {
+    opacity: 1;
+    transform: scaleY(1);
+    /*background-color: green;*/
+  }
+}
+
+@media (min-width: 770px) {
+  /*.sidenav {
+    display: none;
+  }*/
+
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: pink;
+    /**set opacity to default***/
+    opacity: 0;
+    transform: scaleY(0);
+    transition: transform 0.2s, opacity 0.2s;
+  }
+
+  .nav-link:hover::before {
+    opacity: 0.5;
+    transform: scaleY(0.5) scaleX(2);
+  }
+
+  .nav-link.active {
+    color: #000;
+    background-color: #fffde7;
+    font-size: small;
+  }
+
+  .nav-link.active::before {
+    opacity: 1;
+    transform: scaleY(1);
+    /*background-color: green;*/
+  }
+}
+
+.menulist {
+  background-color: #c13030;
+}
+.menulist a {
+  color: #fff;
+}
+
+/*
+.nav-link:hover {
+  color: #fff;
+  background-color: green;
+}
+*/
+/*
+.nav-link.active:hover {
+  color: #000;
+  background-color: #fffde7;
+  font-size: small;
+  transform: scaleY(1.5) scaleX(1);
+  transition: transform 0.5s;
+}*/
+
+.rounded {
+  border-radius: 50%;
+}
+/*
+mat-toolbar a {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  text-decoration:none;
+
+
+}
+*/
+@media (max-width: 768px) {
+  /*.sidenav {
+    display: none;
+  }*/
+
+  .nav-mat-icon-link-desktop {
+    display: none;
+  }
+}
+
+/* PARALAX **/
+
+.pimg1,
+.pimg2,
+.pimg3 {
+  position: relative;
+  opacity: 1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("../../../assets/services/ilustrations/informatica_background.png");
+  min-height: 100%;
+}

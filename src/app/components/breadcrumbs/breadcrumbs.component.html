@@ -1,0 +1,8 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <i class="fa fa-home mr-2"></i>
+    <li class="breadcrumb-item" *ngFor="let item of breads">
+      <a [routerLink]="['/' + item.breadcrumbs]">{{ item.path }}</a>
+    </li>
+  </ol>
+</nav>

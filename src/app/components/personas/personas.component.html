@@ -1,0 +1,124 @@
+<app-breadcrumbs></app-breadcrumbs>
+<div class="search-div">
+  <div class="row">
+    <div class="col-md-10">
+      <mat-form-field class="search-form-field" floatLabel="never">
+        <input
+          matInput
+          [(ngModel)]="searchKey"
+          placeholder="Buscar..."
+          autocomplete="off"
+          (keyup)="applyFilter()"
+        />
+        <button
+          mat-button
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          *ngIf="searchKey"
+          (click)="onSearchClear()"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="listData" matSort>
+    <ng-container matColumnDef="nombre">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Nombre</mat-header-cell
+      >
+      <mat-cell *matCellDef="let element">{{ element.nombre }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="apellido">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Apellido</mat-header-cell
+      >
+      <mat-cell *matCellDef="let element">{{ element.apellido }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="telefono">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Telefono</mat-header-cell
+      >
+      <mat-cell *matCellDef="let element">{{ element.telefono }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="rut">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Rut</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.rut }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="direccion">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Dirección</mat-header-cell
+      >
+      <mat-cell *matCellDef="let element">{{
+        element.direccion.calle + " " + element.direccion.numero
+      }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="comuna">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Comuna</mat-header-cell
+      >
+      <mat-cell *matCellDef="let element">{{
+        element.direccion.comuna.nombre
+      }}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="estado">
+      <mat-header-cell *matHeaderCellDef mat-sort-header
+        >Estado</mat-header-cell
+      >
+      <!--<ng-container >
+        <mat-cell></mat-cell>
+      </ng-container>
+      <ng-container *ngIf="element.activo === 0">
+        <mat-cell></mat-cell>
+      </ng-container>-->
+      <mat-cell *matCellDef="let element">
+        <ng-container *ngIf="element.activo === 1">
+          <i class="fa fa-circle text-success pr-1"></i>
+        </ng-container>
+      </mat-cell>
+      <mat-cell *matCellDef="let element">
+        <ng-container *ngIf="element.activo === 0">
+          <i class="fa fa-circle text-danger pr-1"></i>
+        </ng-container>
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef></mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <a [routerLink]="[row.id]"
+          ><button mat-icon-button color="warn" (click)="onView(row)">
+            <mat-icon>launch</mat-icon>
+          </button></a
+        >
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="loading">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        Loading data...
+      </mat-footer-cell>
+    </ng-container>
+    <ng-container matColumnDef="noData">
+      <mat-footer-cell *matFooterCellDef colspan="6">
+        No data.
+      </mat-footer-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    <mat-footer-row
+      *matFooterRowDef="['loading']"
+      [ngClass]="{ hide: listData != null }"
+    ></mat-footer-row>
+    <mat-footer-row
+      *matFooterRowDef="['noData']"
+      [ngClass]="{ hide: !(listData != null && listData.data.length == 0) }"
+    ></mat-footer-row>
+  </mat-table>
+  <mat-paginator
+    [pageSizeOptions]="[5, 1, 25, 100]"
+    [pageSize]="5"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>

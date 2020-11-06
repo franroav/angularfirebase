@@ -1,0 +1,59 @@
+mat-table {
+  width: 100%;
+}
+
+mat-header-cell {
+  display: flex;
+  justify-content: center;
+}
+.headercellteck {
+  justify-content: flex-start;
+}
+.matcellteck {
+  justify-content: flex-start;
+}
+
+.matcellview {
+  justify-content: center;
+}
+
+.matcelldevelopment {
+  justify-content: center;
+}
+
+/*animate CSS*/
+/*TABLE RESPONSIVE*/
+.tablaServicios {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+  animation-duration: 1.5s;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 500px;
+}
+
+.mobile-label {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-label {
+    width: 80px;
+    display: inline-block;
+    font-weight: bold;
+  }
+
+  .mat-header-row {
+    display: none;
+  }
+
+  .mat-row {
+    flex-direction: column;
+    align-items: start;
+    padding: 8px 24px;
+  }
+}

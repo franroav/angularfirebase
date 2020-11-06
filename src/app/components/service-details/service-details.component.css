@@ -1,0 +1,16 @@
+.bannerCard {
+  animation-duration: 1s;
+
+  /* animation-delay: 2s;*/
+}
+.frameworkCard {
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+  background-color: white;
+  /* animation-delay: 2s;*/
+}
+
+.addeventatc {
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+}

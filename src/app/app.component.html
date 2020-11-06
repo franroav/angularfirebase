@@ -1,0 +1,21 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<app-main-nav>
+  <ngx-spinner
+    bdColor="rgba(51,51,51,0.8)"
+    size="medium"
+    color="#fff"
+    type="ball-scale-multiple"
+  >
+    <p style="font-size: 20px; color: white">Cargando...</p>
+  </ngx-spinner>
+  <!--RXJS
+  <button (click)="addData()">push data</button>
+  <div class="card">
+    <pre>{{ data$ | async | json }}</pre>
+  </div>-->
+
+  <router-outlet></router-outlet>
+</app-main-nav>
+
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

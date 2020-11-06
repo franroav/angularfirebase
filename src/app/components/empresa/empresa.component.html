@@ -1,0 +1,227 @@
+<app-breadcrumbs></app-breadcrumbs>
+<div class="container-fluid empresa-body">
+  <!-- Applying the mat-tyography class adds styles for native elements. -->
+  <section class="mat-typography title-group">
+    <h1 class="text-white text-center"><em>DESARROLLO WEB SPA</em></h1>
+    <mat-divider></mat-divider>
+
+    <mat-list
+      role="list"
+      class="cardList"
+      style="margin-top: 3.5rem; font-family: Arial, Helvetica, sans-serif"
+    >
+    </mat-list>
+    <div
+      fxLayout.xs="column"
+      fxLayout="row wrap"
+      fxLayoutAlign="space-around center"
+      style="margin-top: 2.5rem"
+    >
+      <div class="row">
+        <div class="col-md-6">
+          <!---ECOMMERCE-->
+          <div class="card rainbow-card animated bounceInLeft cardEcommerce">
+            <mat-card
+              fxFlex.sm="0 1 calc(50%-10px)"
+              fxFlex.md="0 1 calc(33%-10px)"
+              fxFlex.gt-md="0 1 calc(25%-10px)"
+            >
+              <div class="card-header">
+                <mat-card-header>
+                  <div mat-card-avatar class="ecommerce-card-image"></div>
+                  <mat-card-title>E-commerce</mat-card-title>
+                  <mat-card-subtitle
+                    ><ul>
+                      <li>
+                        Desarrollo Web
+                        <strong
+                          >SPA Vue Vuetify +<br />
+                          Laravel + Wordpress API Woocommerce</strong
+                        >
+                      </li>
+                    </ul>
+                  </mat-card-subtitle>
+                </mat-card-header>
+              </div>
+              <div class="card-body">
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col-md-4 offset-md-2">
+                      <img
+                        src="../../assets/services//ilustrations/tienda.png"
+                      />
+                    </div>
+                  </div>
+                </mat-card-content>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-6 offset-md-6 mt-4">
+                    <mat-card-actions class="button-action-cards">
+                      <a [routerLink]="['ecommerce']"
+                        ><button mat-icon-button color="warn">
+                          Saber más <mat-icon>launch</mat-icon>
+                        </button></a
+                      >
+                    </mat-card-actions>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!---SOFTWARE DEVELOPMENT -->
+          <div
+            class="card rainbow-card animated bounceInRight cardSoftware mt-2"
+          >
+            <mat-card
+              fxFlex.sm="0 1 calc(50%-10px)"
+              fxFlex.md="0 1 calc(33%-10px)"
+              fxFlex.gt-md="0 1 calc(25%-10px)"
+            >
+              <div class="card-header">
+                <mat-card-header>
+                  <div mat-card-avatar class="software-card-image"></div>
+                  <mat-card-title>Software Development</mat-card-title>
+                  <mat-card-subtitle>
+                    <div class="mt-2">
+                      <ul>
+                        <li>
+                          Desarrollo web
+                          <strong>SPA Angular Material + Firebase</strong>
+                        </li>
+                        <li>
+                          Desarrollo web
+                          <strong> SPA Vue Vuetify + Laravel</strong>
+                        </li>
+                      </ul>
+                    </div>
+                  </mat-card-subtitle>
+                </mat-card-header>
+              </div>
+              <div class="card-body">
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col-md-4 offset-md-2">
+                      <img
+                        src="../../assets/services/ilustrations/software.png"
+                      />
+                    </div>
+                  </div>
+                </mat-card-content>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-6 offset-md-6 mt-2">
+                    <mat-card-actions class="button-action-cards">
+                      <a [routerLink]="['software']"
+                        ><button mat-icon-button color="warn">
+                          Saber más <mat-icon>launch</mat-icon>
+                        </button></a
+                      >
+                    </mat-card-actions>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <!----APLICACION MOVIL-->
+          <div class="card rainbow-card animated bounceInLeft cardApp">
+            <mat-card
+              fxFlex.sm="0 1 calc(50%-10px)"
+              fxFlex.md="0 1 calc(33%-10px)"
+              fxFlex.gt-md="0 1 calc(25%-10px)"
+            >
+              <div class="card-header">
+                <mat-card-header>
+                  <div mat-card-avatar class="app-card-image"></div>
+                  <mat-card-title>Aplicación Web Progresiva PWA</mat-card-title>
+                  <mat-card-subtitle
+                    ><ul>
+                      <li>Aplicación Web <strong>Angular Ionic</strong></li>
+                      <li>Aplicación Web <strong>Wordpress PWA.</strong></li>
+                    </ul>
+                  </mat-card-subtitle>
+                </mat-card-header>
+              </div>
+              <div class="card-body">
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col-md-4 offset-md-2">
+                      <img src="../../assets/services/ilustrations/app.png" />
+                    </div>
+                  </div>
+                </mat-card-content>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-6 offset-md-6 mt-4">
+                    <mat-card-actions class="button-action-cards">
+                      <a [routerLink]="['app']"
+                        ><button mat-icon-button color="warn">
+                          Saber más <mat-icon>launch</mat-icon>
+                        </button></a
+                      >
+                    </mat-card-actions>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <!---PAGINA WEB -->
+          <div class="card rainbow-card animated bounceInRight cardWeb mt-2">
+            <mat-card
+              fxFlex.sm="0 1 calc(50%-10px)"
+              fxFlex.md="0 1 calc(33%-10px)"
+              fxFlex.gt-md="0 1 calc(25%-10px)"
+            >
+              <div class="card-header">
+                <mat-card-header>
+                  <div mat-card-avatar class="web-card-image"></div>
+                  <mat-card-title>Pagina Web SPA</mat-card-title>
+                  <mat-card-subtitle
+                    ><ul>
+                      <li>
+                        Pagina Web con el framework
+                        <strong> SPA mas popular de JavaScript REACT</strong>
+                      </li>
+                    </ul>
+                  </mat-card-subtitle>
+                </mat-card-header>
+              </div>
+              <div class="card-body">
+                <mat-card-content>
+                  <div class="row">
+                    <div class="col-md-4 offset-md-2">
+                      <img src="../../assets/services//ilustrations/web.png" />
+                    </div>
+                  </div>
+                </mat-card-content>
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md-6 offset-md-6">
+                    <mat-card-actions class="button-action-cards">
+                      <a [routerLink]="['web']"
+                        ><button mat-icon-button color="warn">
+                          Saber más <mat-icon>launch</mat-icon>
+                        </button></a
+                      >
+                    </mat-card-actions>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header bg-danger text-white">
+        <button
+          class="btn-dialog-close"
+          mat-stroked-button
+          tabIndex="-1"
+          (click)="onclose()"
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+        <span class="fill-remaining-space"></span>
+        <span class="ml-2">{{
+          service.formulario.controls["$key"].value
+            ? "Editar Formulario de Registro Servicio"
+            : "Formulario Registro de Servicio"
+        }}</span>
+      </div>
+      <div class="card-body">
+        <form
+          [formGroup]="service.formulario"
+          class="normal-form"
+          (submit)="onSubmit()"
+        >
+          <div class="row">
+            <div class="col-md-6 col-sm-4 col-xs-4">
+              <!--Input Name-->
+              <input type="hidden" formControlName="$key" />
+              <!--Input Name-->
+              <mat-form-field>
+                <input formControlName="name" matInput placeholder="Nombre*" />
+                <mat-error>Nombre Completo, Campo Obligatorio*</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-sm-4 col-xs-4">
+              <!--Lastname-->
+              <mat-form-field>
+                <input
+                  formControlName="lastname"
+                  matInput
+                  placeholder="Apellidos*"
+                />
+                <mat-error>Apellidos, Campo Obligatorio*</mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-4 col-xs-4">
+              <!--email-->
+              <mat-form-field>
+                <input formControlName="email" matInput placeholder="Email*" />
+                <mat-error>Email Invalido, campo Obligatorio*</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6 col-sm-4 col-xs-4">
+              <mat-form-field>
+                <mat-select formControlName="project" placeholder="Proyecto">
+                  <mat-option value="Software Development"
+                    >Software Development</mat-option
+                  >
+                  <mat-option value="Ecommerce Development"
+                    >Ecommerce Development</mat-option
+                  >
+                  <mat-option value="App Development"
+                    >App Development</mat-option
+                  >
+                  <mat-option value="Web Development"
+                    >Web Development</mat-option
+                  >
+                  <!---CICLO FOR PARA LAS OPCIONES DEL SELECT 
+              <ng-container *ngFor="let department of departmentService.array">
+                <mat-option value="{{ department.$key }}"
+                  >{{ department.code }} - {{ department.name }}</mat-option
+                >
+              </ng-container>-->
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <!--Descripcion-->
+              <mat-form-field>
+                <textarea
+                  formControlName="description"
+                  matInput
+                  placeholder="Descripcion del Proyecto*"
+                ></textarea>
+                <mat-error
+                  >Este campo es Obligatorio* minimo(30 letras)
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-md-6">
+              <mat-form-field>
+                <input
+                  formControlName="date"
+                  matInput
+                  [matDatepicker]="picker"
+                  placeholder="Fecha"
+                />
+                <mat-error>Este campo es Obligatorio*</mat-error>
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 offset-md-6">
+              <button
+                mat-raised-button
+                color="primary"
+                type="submit"
+                class="mr-1"
+                [disabled]="service.formulario.invalid"
+              >
+                Enviar
+              </button>
+              <button mat-raised-button color="warn" (click)="onClear()">
+                Limpiar
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

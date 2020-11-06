@@ -1,0 +1,57 @@
+.example-fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+    
+  }
+
+  .example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  form.normal-form{
+    margin:10px;
+  }
+
+  .controles-container{
+    width: 100%;
+    padding: 5%;
+  }
+/*
+  .employee-form{
+    width:600px;
+  }
+*/
+  .controles-container > * {
+
+    width: 100%;
+  }
+
+  .add-bottom-padding{
+    padding-bottom:  10px;
+  }
+
+  mat-radio-group mat-radio-button{
+    margin-left: 5px;
+  }
+
+  .button-row{
+    margin: 5px;
+  }
+
+  /*  Notification */
+
+  snack-bar-container.success {
+    background-color: #5cb85c;
+    color: #fff;
+  }
+
+  snack-bar-container.notification simple-snack-bar {
+    background-color: #5cb85c;
+    color: #fff;
+  }

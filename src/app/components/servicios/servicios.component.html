@@ -1,0 +1,169 @@
+<app-breadcrumbs></app-breadcrumbs>
+<section class="container">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="search-div" style="width: 100%">
+          <mat-form-field class="search-form-field" floatLabel="never">
+            <input
+              matInput
+              [(ngModel)]="searchKey"
+              placeholder="Buscar"
+              autocomplete="off"
+              (keyup)="applyFilter()"
+            />
+            <button
+              mat-button
+              matSuffix
+              mat-icon-button
+              aria-label="Clear"
+              *ngIf="searchKey"
+              (click)="onSearchClear()"
+            >
+              <mat-icon>close</mat-icon>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="row animate fadeIn tablaServicios">
+      <mat-table
+        [dataSource]="dataTable"
+        matSort
+        class="col-md-12"
+        style="width: 100%"
+      >
+        <ng-container matColumnDef="id">
+          <mat-header-cell *matHeaderCellDef class="headercellteck"
+            >Tecnologías</mat-header-cell
+          >
+          <mat-cell *matCellDef="let element" class="matcellteck">
+            <div class="row" *ngIf="windowSize.x > 600">
+              <div class="col-md-4 offset-md-4">
+                <img src="{{ element.frontend }}" width="30px" />
+              </div>
+              <div class="col-md-4">
+                <img src="{{ element.backend }}" width="30px" />
+              </div>
+            </div>
+            <div class="row" *ngIf="windowSize.x < 600">
+              <h4
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <span class="badge badge-secondary badge-pill"
+                  >ID: {{ element.id }}</span
+                >
+              </h4>
+
+              <div>
+                <div class="row text-center">
+                  <div class="col-md-6 my-2">
+                    <ul>
+                      <li>
+                        <small class="text-muted">Front-End.</small>
+                        <img
+                          class="ml-1"
+                          src="{{ element.frontend }}"
+                          width="30px"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 my-2">
+                    <ul>
+                      <li>
+                        <small class="text-muted">Back-End.</small>
+                        <img
+                          class="ml-1"
+                          src="{{ element.backend }}"
+                          width="30px"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="desarrollo">
+          <div class="card text-center">
+            <div class="card-header bg-danger text-white">
+              <div class="card-title">
+                <mat-header-cell *matHeaderCellDef>DESAROLLO</mat-header-cell>
+              </div>
+            </div>
+            <div class="card-body">
+              <mat-cell *matCellDef="let element" class="matcelldevelopment">
+                <div class="card bg-{{ element.color }}">
+                  <div class="card-body text-white">
+                    {{ element.name }}
+                  </div>
+                </div>
+              </mat-cell>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <mat-header-cell *matHeaderCellDef>Saber más</mat-header-cell>
+          <mat-cell *matCellDef="let element" class="matcellview">
+            <div class="row" *ngIf="windowSize.x > 600">
+              <div class="col-md-8 offset-md-2">
+                <span>
+                  <a [routerLink]="[element.id]">
+                    <button
+                      mat-icon-button
+                      color="warn"
+                      matTooltip="Saber Más"
+                      (click)="onView(element)"
+                    >
+                      <mat-icon>remove_red_eye</mat-icon>
+                    </button></a
+                  >
+                </span>
+
+                <br />
+              </div>
+            </div>
+            <div class="row" *ngIf="windowSize.x < 600">
+              <div class="col-md-8 offset-md-2">
+                <ul>
+                  <li>
+                    Saber más:
+                    <span class="ml-1">
+                      <a [routerLink]="[element.id]">
+                        <button
+                          mat-icon-button
+                          color="warn"
+                          matTooltip="Saber Más"
+                          (click)="onView(element)"
+                        >
+                          <mat-icon>remove_red_eye</mat-icon>
+                        </button></a
+                      >
+                    </span>
+                  </li>
+                </ul>
+
+                <br />
+              </div>
+            </div>
+          </mat-cell>
+        </ng-container>
+        <ng-container matColumnDef="loading">
+          <mat-footer-cell *matFooterCellDef colspan="6">
+            Loading data...
+          </mat-footer-cell>
+        </ng-container>
+        <ng-container matColumnDef="noData">
+          <mat-footer-cell *matFooterCellDef colspan="6">
+            No data.
+          </mat-footer-cell>
+        </ng-container>
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+      </mat-table>
+    </div>
+  </div>
+</section>
